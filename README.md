@@ -25,7 +25,7 @@ The IDE opens an empty workspace at `/home/coder/workspace`. There is deliberate
 
 ## Extensions installed in the image
 
-- `ritwickdey.LiveServer` — adds the familiar **Go Live** workflow and live reload for web projects. citeturn693347search0turn693347search9
+- `ritwickdey.LiveServer` — adds the familiar **Go Live** workflow and live reload for web projects.
 - `ms-python.python`
 - `ms-python.vscode-pylance`
 - `dbaeumer.vscode-eslint`
@@ -34,7 +34,7 @@ The IDE opens an empty workspace at `/home/coder/workspace`. There is deliberate
 - `golang.go`
 - `PKief.material-icon-theme`
 
-code-server supports extension installation from its Extensions UI and from the command line; its default gallery is Open VSX. citeturn317726search2turn613191search2
+code-server supports extension installation from its Extensions UI and from the command line; its default gallery is Open VSX.
 
 ## Real-time suggestions
 
@@ -46,12 +46,12 @@ Python and `python3-tk` are installed in the image. A normal Tkinter program can
 
 ## Security
 
-code-server's own documentation warns that exposing it without authentication can allow terminal access to the machine. citeturn613191search1turn280460search1
+code-server's own documentation warns that exposing it without authentication can allow terminal access to the machine.
 
 For a personal Shard Cloud app, you can leave `CODE_SERVER_PASSWORD` empty when another access-control layer protects the app. For a directly public URL, set `CODE_SERVER_PASSWORD` as a secret.
 
 ## References
 
-- code-server current release line: 4.138.0 (September 19, 2026). citeturn317726search0turn317726search1
-- code-server supports a configurable bind address and `$PORT`. citeturn130622search2
-- code-server's built-in port proxy serves development services at `/proxy/<port>/`. citeturn280460search0
+- code-server current release line: 4.138.0 (September 19, 2026).
+- code-server supports a configurable bind address and `$PORT`.
+- code-server's built-in port proxy serves development services at `/proxy/<port>/`.
