@@ -1,14 +1,16 @@
 {
   "name": "vs-code-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Single-port browser IDE for Shard Cloud: editor, terminal, file API, code runner and live preview.",
-  "main": "server.js",
+  "description": "VS Code-compatible browser IDE for Shard Cloud.",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "test": "node --test"
+    "start": "sh ./start.sh",
+    "dev": "sh ./start.sh"
   },
-  "engines": { "node": ">=20" },
-  "dependencies": { "ws": "^8.18.0" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "code-server": "4.138.0"
+  }
 }
