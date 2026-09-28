@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VS Code Web — Shard</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
+</head>
+<body>
+<div id="app">
+<header class="titlebar"><div class="brand">VS Code Web</div><div class="toolbar">
+<button id="runBtn">▶ Run</button><button id="saveBtn">Save</button><button id="liveBtn">Go Live</button><button id="newFileBtn">＋ File</button><button id="newFolderBtn">＋ Folder</button><button id="commandBtn">⌘ Commands</button>
+</div><div id="statusPill" class="status">Ready</div></header>
+<main class="workspace">
+<aside class="activitybar">
+<button class="activity active" data-panel="explorer">▤</button><button class="activity" data-panel="search">⌕</button><button class="activity" data-panel="extensions">▧</button><button class="activity" data-panel="runtime">▷</button>
+</aside>
+<aside class="sidebar">
+<div class="sidebar-title" id="sidebarTitle">EXPLORER</div>
+<section id="panel-explorer" class="panel active"><div id="tree" class="tree"></div></section>
+<section id="panel-search" class="panel"><input id="searchInput" class="searchbox" placeholder="Search files..."><div id="searchResults" class="results muted">Type to search.</div></section>
+<section id="panel-extensions" class="panel"><input id="extensionInput" class="searchbox" placeholder="Search Open VSX..."><div id="extensionResults" class="results"></div></section>
+<section id="panel-runtime" class="panel"><div class="runtime-card"><strong>Runtime</strong><p>Run code on the server account. Use a sandbox/container before exposing this to untrusted users.</p><button id="stopBtn">Stop previews</button><div id="runtimeInfo" class="muted">Loading…</div></div></section>
+</aside>
+<section class="editor-shell"><div id="tabs" class="tabs"></div><div id="editor" class="editor"></div><div class="terminal-shell"><div class="terminal-header"><span>TERMINAL</span><span id="terminalState" class="muted">connecting…</span></div><div id="terminal"></div></div></section>
+<aside class="preview-shell"><div class="preview-header"><span>LIVE PREVIEW</span><span><button id="refreshPreview">↻</button><button id="openPreview">↗</button></span></div><div id="previewEmpty" class="preview-empty">Press <strong>Go Live</strong> to start.</div><iframe id="preview" title="Live Preview" sandbox="allow-scripts allow-forms allow-modals allow-popups"></iframe></aside>
+</main>
+<div id="toast" class="toast"></div>
+<div id="dialog" class="dialog hidden"><div class="dialog-card"><div id="dialogTitle" class="dialog-title"></div><input id="dialogInput" class="dialog-input"><div class="dialog-actions"><button id="dialogCancel">Cancel</button><button id="dialogOk">OK</button></div></div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
